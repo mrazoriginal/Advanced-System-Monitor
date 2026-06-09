@@ -1,5 +1,8 @@
 import psutil
 
+# warm-up (IMPORTANT)
+psutil.cpu_percent(interval=None)
+
 def get_cpu():
     return psutil.cpu_percent(interval=None)
 
@@ -12,6 +15,7 @@ def get_processes():
 
     for p in psutil.process_iter(['pid', 'name', 'cpu_percent', 'memory_percent']):
         try:
+            p.cpu_percent(None)
             processes.append(p.info)
         except (psutil.NoSuchProcess, psutil.AccessDenied):
             continue
