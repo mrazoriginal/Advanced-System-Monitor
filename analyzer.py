@@ -1,4 +1,14 @@
 def analyze(history, processes):
+    if not history["cpu"]:
+        return {
+            "cpu_avg": 0,
+            "cpu_max": 0,
+            "ram_avg": 0,
+            "ram_max": 0,
+            "top_cpu": [],
+            "top_mem": []
+        }
+
     cpu_avg = sum(history["cpu"]) / len(history["cpu"])
     cpu_max = max(history["cpu"])
 
