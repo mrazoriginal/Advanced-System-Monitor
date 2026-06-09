@@ -1,3 +1,7 @@
+- Watch a demo here: https://youtu.be/rrjk7--OYeY
+
+---
+
 # Advanced System Monitor / مانیتور پیشرفته سیستم
 
 A lightweight Python-based system monitoring tool that tracks CPU, RAM, and process usage in real time, collects historical data, and provides graphs for analysis.
