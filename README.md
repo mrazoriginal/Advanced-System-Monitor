@@ -27,19 +27,8 @@ It also stores historical snapshots, generates statistics, and visualizes CPU/RA
 - CSV export of collected data / خروجی CSV
 
 ---
-
-## 📦 Requirements / نیازمندی‌ها
-
-- Python 3.8+
-- psutil
-- matplotlib
-
-```bash
-pip install psutil matplotlib
-
-# ⚙️ How to Run / نحوه اجرا
-python main.py
-📁 Project Structure / ساختار پروژه
+    
+## 📁 Project Structure / ساختار پروژه
 main.py → entry point
 collector.py → system data collection
 history.py → time-series storage
@@ -47,18 +36,33 @@ analyzer.py → statistics engine
 visualizer.py → graphs
 logger.py → CSV export
 config.py → configuration
-🧱 Architecture / معماری
+
+## 🧱 Architecture / معماری
 Collector → gathers system data
 History → stores snapshots over time
 Analyzer → computes statistics
 Visualizer → generates graphs
 Logger → exports CSV
-📈 Output / خروجی
+
+## 📈 Output / خروجی
 Real-time monitoring
 CPU/RAM graphs
 CSV log file
 Final statistical report
 🖥️ Concept / مفهوم
+
+## 📦 Requirements / نیازمندی‌ها
+
+- Python 3.8+
+- psutil
+- matplotlib
+
+[pip install psutil matplotlib]
+
+## ⚙️ How to Run / نحوه اجرا
+python main.py
+
+---
 
 This project simulates OS-level resource monitoring, including CPU scheduling behavior and memory usage over time.
 
