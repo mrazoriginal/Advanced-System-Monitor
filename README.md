@@ -64,8 +64,8 @@ python main.py
 
 ---
 
-This project simulates OS-level resource monitoring, including CPU scheduling behavior and memory usage over time.
+## 📌This project simulates OS-level resource monitoring, including CPU scheduling behavior and memory usage over time.
 
 این پروژه رفتار سیستم‌عامل در مدیریت منابع مانند CPU و حافظه را شبیه‌سازی می‌کند.
 
-Built with pain, debugging, and too much CPU watching 😐
+- Built with pain, debugging, and too much CPU watching 😐
