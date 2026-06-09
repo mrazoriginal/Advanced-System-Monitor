@@ -58,19 +58,21 @@ Final statistical report
 - matplotlib
 
 [pip install psutil matplotlib tk]
+
 ---
-## ⚙️ How to Run safely /  نحوه اجرا امن
+
+#### ⚙️ How to Run safely /  نحوه اجرا امن
 
 ### 1️⃣ Set up a virtual environment (sandbox)
 
 # Windows:
-python -m venv venv
-venv\Scripts\activate
+"python -m venv venv"
+"venv\Scripts\activate"
 
-Linux/macOS:
+# Linux/macOS:
 
-python3 -m venv venv
-source venv/bin/activate
+"python3 -m venv venv"
+"source venv/bin/activate"
 
 # 2️⃣ Install dependencies
 pip install -r requirements.txt
