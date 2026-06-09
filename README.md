@@ -1,25 +1,30 @@
 # Advanced System Monitor / مانیتور پیشرفته سیستم
 
-A lightweight Python-based system monitoring tool that tracks CPU, RAM, and process usage in real time.
+A lightweight Python-based system monitoring tool that tracks CPU, RAM, and process usage in real time, collects historical data, and provides graphs for analysis.
 
-یک ابزار مانیتورینگ سبک پایتونی برای بررسی لحظه‌ای مصرف CPU، RAM و پردازش‌ها.
+یک ابزار مانیتورینگ سبک پایتونی برای بررسی لحظه‌ای مصرف CPU، RAM و پردازش‌ها، جمع‌آوری داده‌های تاریخی و ارائه نمودار برای تحلیل.
 
 ---
 
 ## 🚀 Overview / معرفی
 
-This project collects system performance data using `psutil` and provides live stats for analysis or debugging.
+This project collects system performance data using `psutil` and provides live stats for analysis or debugging.  
+It also stores historical snapshots, generates statistics, and visualizes CPU/RAM usage.
 
-این پروژه با استفاده از کتابخانه `psutil` اطلاعات سیستم را جمع‌آوری کرده و برای تحلیل یا دیباگ، آمار زنده ارائه می‌دهد.
+این پروژه با استفاده از کتابخانه `psutil` اطلاعات سیستم را جمع‌آوری کرده و برای تحلیل یا دیباگ، آمار زنده ارائه می‌دهد.  
+همچنین داده‌های تاریخی را ذخیره می‌کند، آمار نهایی محاسبه می‌کند و مصرف CPU و RAM را بصری‌سازی می‌کند.
 
 ---
 
 ## ✨ Features / ویژگی‌ها
 
-- CPU usage tracking / بررسی مصرف CPU
-- RAM usage tracking / بررسی مصرف RAM
-- Process monitoring / مانیتورینگ پردازش‌ها
-- Lightweight and fast / سبک و سریع
+- Real-time CPU usage tracking / بررسی مصرف CPU به صورت لحظه‌ای
+- Real-time RAM usage tracking / بررسی مصرف RAM به صورت لحظه‌ای
+- Process monitoring (PID, name, CPU %, RAM %) / مانیتورینگ پردازش‌ها
+- Time-series data collection / جمع‌آوری داده‌های زمانی
+- Statistical analysis (average, max, top processes) / تحلیل آماری
+- Data visualization using graphs / نمایش نمودار
+- CSV export of collected data / خروجی CSV
 
 ---
 
@@ -27,47 +32,36 @@ This project collects system performance data using `psutil` and provides live s
 
 - Python 3.8+
 - psutil
-
-Install dependency:
-
-```bash
-pip install psutil
-```
-
----
-
-## ⚙️ How to Run / نحوه اجرا
-
-Run the main script:
+- matplotlib
 
 ```bash
+pip install psutil matplotlib
+
+# ⚙️ How to Run / نحوه اجرا
 python main.py
-```
+📁 Project Structure / ساختار پروژه
+main.py → entry point
+collector.py → system data collection
+history.py → time-series storage
+analyzer.py → statistics engine
+visualizer.py → graphs
+logger.py → CSV export
+config.py → configuration
+🧱 Architecture / معماری
+Collector → gathers system data
+History → stores snapshots over time
+Analyzer → computes statistics
+Visualizer → generates graphs
+Logger → exports CSV
+📈 Output / خروجی
+Real-time monitoring
+CPU/RAM graphs
+CSV log file
+Final statistical report
+🖥️ Concept / مفهوم
 
-If your entry file is different, run:
+This project simulates OS-level resource monitoring, including CPU scheduling behavior and memory usage over time.
 
-```bash
-python <your_file>.py
-```
+این پروژه رفتار سیستم‌عامل در مدیریت منابع مانند CPU و حافظه را شبیه‌سازی می‌کند.
 
----
-
-## 📁 Project Structure / ساختار پروژه
-
-```
-collector.py   -> system data collection / جمع‌آوری داده‌ها
-analyzer.py    -> data analysis / تحلیل داده‌ها
-config.py      -> configuration / تنظیمات
-```
-
----
-
-## 🧠 Notes / نکات
-
-This project is meant for learning, experimentation, and basic system monitoring.
-
-این پروژه برای یادگیری، آزمایش و مانیتورینگ پایه سیستم طراحی شده است.
-
----
-
-Built with pain, debugging, and way too much CPU watching 😐
+Built with pain, debugging, and too much CPU watching 😐
