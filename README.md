@@ -57,7 +57,7 @@ Final statistical report
 - psutil
 - matplotlib
 
-[pip install psutil matplotlib]
+[pip install psutil matplotlib tk]
 
 ## ⚙️ How to Run / نحوه اجرا
 python main.py
