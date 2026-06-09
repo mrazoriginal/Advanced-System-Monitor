@@ -61,61 +61,123 @@ Final statistical report
 
 ---
 
-#### ⚙️ How to Run safely /  نحوه اجرا امن
+## ⚙️ How to Run Safely / نحوه اجرای امن
 
-### 1️⃣ Set up a virtual environment (sandbox)
+### 1️⃣ Set Up a Virtual Environment (Sandbox) / ایجاد محیط مجازی
 
-# Windows:
-"python -m venv venv"
-"venv\Scripts\activate"
+**Windows**
 
-# Linux/macOS:
+```bat
+python -m venv venv
+venv\Scripts\activate
+```
 
-"python3 -m venv venv"
-"source venv/bin/activate"
+**Linux / macOS**
 
-# 2️⃣ Install dependencies
+```bash
+python3 -m venv venv
+source venv/bin/activate
+```
+
+---
+
+### 2️⃣ Install Dependencies / نصب وابستگی‌ها
+
+```bash
 pip install -r requirements.txt
+```
 
 This installs:
 
-psutil (system monitoring)
-matplotlib (data visualization)
+* `psutil` → System monitoring
+* `matplotlib` → Data visualization
 
-# 3️⃣ Run the monitor
+این دستور کتابخانه‌های موردنیاز پروژه را نصب می‌کند:
+
+* `psutil` → مانیتورینگ سیستم
+* `matplotlib` → رسم نمودارها
+
+---
+
+### 3️⃣ Run the Monitor / اجرای برنامه
+
+```bash
 python main.py
+```
 
 The program will:
 
-Display live CPU usage
-Display live RAM usage
-Display the number of running processes
-Update automatically based on the interval configured in config.py
+* Display live CPU usage
+* Display live RAM usage
+* Display the number of running processes
+* Update automatically based on the interval configured in `config.py`
 
-# 4️⃣ Stop the program
+برنامه موارد زیر را به صورت لحظه‌ای نمایش می‌دهد:
+
+* میزان مصرف CPU
+* میزان مصرف RAM
+* تعداد پردازش‌های در حال اجرا
+* بروزرسانی خودکار براساس تنظیمات `config.py`
+
+---
+
+### 4️⃣ Stop the Program / توقف برنامه
 
 Press:
 
-*CTRL + C*
+```text
+CTRL + C
+```
 
 After stopping, the program will:
 
-Analyze collected data
-Generate a statistical summary
-Save monitoring data to a CSV file
-Display CPU and RAM usage graphs
+* Analyze collected data
+* Generate a statistical summary
+* Save monitoring data to a CSV file
+* Display CPU and RAM usage graphs
 
-# 5️⃣ Test Suggestions
-Open multiple browser tabs and observe resource usage changes
-Launch applications such as VS Code, Chrome, or games
-Compare system activity before and after opening programs
-Verify that CPU, RAM, and process counts update correctly
+پس از توقف برنامه:
 
-⚡ Notes
-The project runs locally inside a virtual environment
-No system files are modified
-Safe for testing and demonstrations
-Recommended for academic and educational use
+* داده‌های جمع‌آوری‌شده تحلیل می‌شوند
+* گزارش آماری نهایی تولید می‌شود
+* فایل CSV ذخیره می‌شود
+* نمودارهای CPU و RAM نمایش داده می‌شوند
+
+---
+
+### 5️⃣ Testing Suggestions / پیشنهاد برای تست
+
+* Open multiple browser tabs and observe resource usage changes
+* Launch applications such as VS Code, Chrome, or games
+* Compare system activity before and after opening programs
+* Verify that CPU, RAM, and process counts update correctly
+
+برای تست برنامه می‌توانید:
+
+* چند تب مرورگر باز کنید و تغییرات منابع را مشاهده کنید
+* برنامه‌هایی مانند VS Code، Chrome یا بازی‌ها را اجرا کنید
+* وضعیت سیستم را قبل و بعد از اجرای برنامه‌ها مقایسه کنید
+* از بروزرسانی صحیح CPU، RAM و تعداد پردازش‌ها اطمینان حاصل کنید
+
+---
+
+### ⚡ Notes / نکات
+
+* The project runs locally inside a virtual environment
+
+* No system files are modified
+
+* Safe for testing and demonstrations
+
+* Recommended for academic and educational use
+
+* پروژه به صورت محلی و داخل محیط مجازی اجرا می‌شود
+
+* هیچ فایل سیستمی تغییر نمی‌کند
+
+* برای تست و ارائه کاملاً ایمن است
+
+* برای اهداف آموزشی و دانشگاهی مناسب است
 
 ---
 
