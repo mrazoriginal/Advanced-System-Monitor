@@ -58,9 +58,62 @@ Final statistical report
 - matplotlib
 
 [pip install psutil matplotlib tk]
+---
+## ⚙️ How to Run safely /  نحوه اجرا امن
 
-## ⚙️ How to Run / نحوه اجرا
+### 1️⃣ Set up a virtual environment (sandbox)
+
+# Windows:
+python -m venv venv
+venv\Scripts\activate
+
+Linux/macOS:
+
+python3 -m venv venv
+source venv/bin/activate
+
+# 2️⃣ Install dependencies
+pip install -r requirements.txt
+
+This installs:
+
+psutil (system monitoring)
+matplotlib (data visualization)
+
+# 3️⃣ Run the monitor
 python main.py
+
+The program will:
+
+Display live CPU usage
+Display live RAM usage
+Display the number of running processes
+Update automatically based on the interval configured in config.py
+
+# 4️⃣ Stop the program
+
+Press:
+
+*CTRL + C*
+
+After stopping, the program will:
+
+Analyze collected data
+Generate a statistical summary
+Save monitoring data to a CSV file
+Display CPU and RAM usage graphs
+
+# 5️⃣ Test Suggestions
+Open multiple browser tabs and observe resource usage changes
+Launch applications such as VS Code, Chrome, or games
+Compare system activity before and after opening programs
+Verify that CPU, RAM, and process counts update correctly
+
+⚡ Notes
+The project runs locally inside a virtual environment
+No system files are modified
+Safe for testing and demonstrations
+Recommended for academic and educational use
 
 ---
 
