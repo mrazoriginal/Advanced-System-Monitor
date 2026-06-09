@@ -1,4 +1,7 @@
+# analyzes system history and process stats
+
 def analyze(history, processes):
+    # handle empty dataset case
     if not history["cpu"]:
         return {
             "cpu_avg": 0,
@@ -9,13 +12,18 @@ def analyze(history, processes):
             "top_mem": []
         }
 
+    # CPU statistics
     cpu_avg = sum(history["cpu"]) / len(history["cpu"])
     cpu_max = max(history["cpu"])
 
+    # RAM statistics
     ram_avg = sum(history["ram"]) / len(history["ram"])
     ram_max = max(history["ram"])
 
+    # top processes by CPU usage
     top_cpu = sorted(processes, key=lambda x: x.get("cpu_percent", 0), reverse=True)[:5]
+
+    # top processes by memory usage
     top_mem = sorted(processes, key=lambda x: x.get("memory_percent", 0), reverse=True)[:5]
 
     return {
