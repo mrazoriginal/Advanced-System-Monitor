@@ -4,12 +4,6 @@
 
 ---
 
-# 📄 Advanced System Monitor — Technical Documentation (Code-Backed)
-
-# 📄 مانیتور پیشرفته سیستم — مستندات فنی (بر پایه کد)
-
----
-
 # 1. Project Overview | نمای کلی پروژه
 
 ### EN
@@ -95,9 +89,6 @@ logger.py + visualizer.py (output layer)
 # 3. تحلیل ماژول‌ها (منطق خط‌به‌خط)
 
 ---
-
-# 3.1 main.py — Execution Engine 🧠
-
 # 3.1 main.py — موتور اجرا
 
 ---
@@ -293,9 +284,6 @@ plot(history)
 **FA:** خروجی CSV + رسم نمودار
 
 ---
-
-# 3.2 collector.py — OS Data Layer ⚙️
-
 # 3.2 collector.py — لایه جمع‌آوری داده
 
 ---
@@ -402,9 +390,6 @@ def add_snapshot(t, cpu, ram, process_count):
 **FA:** افزودن یک فریم داده
 
 ---
-
-# 3.4 analyzer.py — Statistics Engine 📊
-
 # 3.4 analyzer.py — موتور تحلیل
 
 ---
@@ -461,9 +446,6 @@ top_mem = sorted(processes, key=lambda x: x.get("memory_percent", 0), reverse=Tr
 **EN/FA:** top RAM consumers / پردازش‌های پرمصرف RAM
 
 ---
-
-# 3.5 visualizer.py — Graph Engine 📈
-
 # 3.5 visualizer.py — موتور نمودار
 
 ---
@@ -489,9 +471,6 @@ plt.plot(history["ram"])
 **FA:** نمودار مصرف RAM
 
 ---
-
-# 3.6 logger.py — CSV Export 💾
-
 # 3.6 logger.py — خروجی CSV
 
 ---
@@ -529,9 +508,6 @@ writer.writerow([...])
 **FA:** نوشتن داده‌ها در فایل
 
 ---
-
-# 3.7 config.py — Configuration ⚙️
-
 # 3.7 config.py — تنظیمات
 
 ```python
