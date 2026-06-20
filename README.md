@@ -1,5 +1,6 @@
 - Watch a demo here: https://youtu.be/rrjk7--OYeY
-
+---
+[Open detailed README](./DETAILED_README.md)
 ---
 
 # Advanced System Monitor / مانیتور پیشرفته سیستم
