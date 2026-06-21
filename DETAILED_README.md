@@ -361,9 +361,6 @@ except (psutil.NoSuchProcess, psutil.AccessDenied):
 **FA:** مدیریت خطای امن
 
 ---
-
-# 3.3 history.py — Time-Series Buffer 🧾
-
 # 3.3 history.py — بافر سری زمانی
 
 ---
@@ -604,7 +601,3 @@ Lightweight observability + analytics pipeline:
 سیستم سبک پایش و تحلیل:
 
 * داده سیستم → ساختاردهی → تحلیل → نمایش → خروجی
-
----
-
-If needed: can convert this into a **professor-ready Word (.docx) report with cover page, diagrams, and formal academic formatting**.
